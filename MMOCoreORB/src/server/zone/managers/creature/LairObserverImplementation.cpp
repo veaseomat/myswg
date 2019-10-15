@@ -171,6 +171,7 @@ void LairObserverImplementation::healLair(TangibleObject* lair, TangibleObject* 
 			continue;
 
 		//  TODO: Range check
+		damageToHeal += lairMaxCondition / 100;
 
 	}
 

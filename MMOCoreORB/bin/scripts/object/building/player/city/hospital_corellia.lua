@@ -48,8 +48,8 @@ object_building_player_city_hospital_corellia = object_building_player_city_shar
 	allowedZones = {"corellia", "dantooine", "lok", "naboo", "rori", "talus", "tatooine", "endor", "yavin4", "dathomir"},
 	length = 5,
 	width = 5,
-	cityRankRequired = 3,
-	abilityRequired = "place_hospital",
+	cityRankRequired = 0,
+	abilityRequired = "place_cityhall",
 	zoneComponent = "StructureZoneComponent",
 	skillMods = {
 		{"private_medical_rating", 100},

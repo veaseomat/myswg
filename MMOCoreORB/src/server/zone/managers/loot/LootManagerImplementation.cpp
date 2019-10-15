@@ -15,8 +15,6 @@
 #include "server/zone/ZoneServer.h"
 #include "LootGroupMap.h"
 #include "server/zone/objects/tangible/component/lightsaber/LightsaberCrystalComponent.h"
-#include "server/zone/managers/creature/CreatureManager.h"
-#include "server/zone/objects/creature/ai/CreatureTemplate.h"
 
 void LootManagerImplementation::initialize() {
 	info("Loading configuration.");

@@ -918,8 +918,7 @@ function DeathWatchBunkerScreenPlay:notifyEnteredOutsideLockedDoorArea(pArea, pP
 	end
 
 	if (not CreatureObject(pPlayer):hasScreenPlayState(1, "death_watch_bunker")) then
-		CreatureObject(pPlayer):setScreenPlayState(1, "death_watch_bunker")
-		CreatureObject(pCreature):sendGroupMessage("You hotwired the terminal, try again to gain entry")
+		CreatureObject(pPlayer):sendSystemMessage("@dungeon/death_watch:entrance_denied")
 	end
 
 	return 0
@@ -1469,8 +1468,13 @@ function DeathWatchBunkerScreenPlay:checkDoor(pSceneObject, pCreature)
 
 	if doorType == 1 then
 		if not CreatureObject(pCreature):hasScreenPlayState(1, "death_watch_bunker") then
-			CreatureObject(pPlayer):setScreenPlayState(1, "death_watch_bunker")
-			CreatureObject(pCreature):sendGroupMessage("You hotwired the terminal, try again to gain entry")
+			if (doorEnabled == 0) then
+				CreatureObject(pCreature):sendSystemMessage(self.doorMessages[doorNumber].lock)
+				return
+			end
+
+			CreatureObject(pCreature):sendGroupMessage("@dungeon/death_watch:airlock_backup")
+			self:spawnDefenders(doorNumber, pCreature)
 		else
 			self:unlockForGroup(doorNumber, pCreature, false)
 			return

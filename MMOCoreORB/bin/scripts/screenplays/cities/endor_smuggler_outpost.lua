@@ -23,6 +23,8 @@ function EndorSmugglerOutpostScreenPlay:spawnMobiles()
 	self:setMoodString(pNpc, "npc_sitting_chair")
 
 	--outside
+	spawnMobile("endor", "boba_fett", 60, -4685.54, 13.47, 4329.69, 107.809, 0)
+	
 	spawnMobile("endor", "businessman", 60, -899.977, 78, 1548.09, 107.809, 0)
 	spawnMobile("endor", "commoner", 60, -828.009, 76, 1573.28, 320.402, 0)
 	spawnMobile("endor", "commoner", 60, -838.625, 76, 1574.97, 333.27, 0)

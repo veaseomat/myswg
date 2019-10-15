@@ -36,7 +36,7 @@ int SaberInventoryContainerComponent::canAddObject(SceneObject* sceneObject, Sce
 
 	ManagedReference<CreatureObject*> creature = crystal->getParentRecursively(SceneObjectType::PLAYERCREATURE).castTo<CreatureObject*>();
 
-	if (creature == NULL || crystal->getOwnerID() != creature->getObjectID()){
+	if (creature == nullptr || crystal->getOwnerID() != creature->getObjectID()){
 		errorDescription = "@jedi_spam:saber_crystal_not_owner";
 		return TransferErrorCode::INVALIDTYPE;
 	}
@@ -75,8 +75,14 @@ int SaberInventoryContainerComponent::notifyObjectInserted(SceneObject* sceneObj
 	if (weao->isJediWeapon()) {
 		ManagedReference<LightsaberCrystalComponent*> crystal = cast<LightsaberCrystalComponent*>( object);
 		if (crystal->getColor() == 31){
+			weao->setAttackSpeed(weao->getAttackSpeed() + crystal->getAttackSpeed());
 			weao->setMinDamage(weao->getMinDamage() + crystal->getDamage());
-			weao->setMaxDamage(weao->getMaxDamage() + crystal->getSacHealth());
+			weao->setMaxDamage(weao->getMaxDamage() + crystal->getDamage());
+			weao->setHealthAttackCost(weao->getHealthAttackCost() + crystal->getSacHealth());
+			weao->setActionAttackCost(weao->getActionAttackCost() + crystal->getSacAction());
+			weao->setMindAttackCost(weao->getMindAttackCost() + crystal->getSacMind());
+			weao->setWoundsRatio(weao->getWoundsRatio() + crystal->getWoundChance());
+			weao->setForceCost(weao->getForceCost() + crystal->getForceCost());
 		}
 
 		if (crystal->getColor() != 31) {
@@ -106,8 +112,14 @@ int SaberInventoryContainerComponent::notifyObjectRemoved(SceneObject* sceneObje
 			Locker locker(weao);
 
 			if (crystal->getColor() == 31){
+				weao->setAttackSpeed(weao->getAttackSpeed() - crystal->getAttackSpeed());
 				weao->setMinDamage(weao->getMinDamage() - crystal->getDamage());
-				weao->setMaxDamage(weao->getMaxDamage() - crystal->getSacHealth());
+				weao->setMaxDamage(weao->getMaxDamage() - crystal->getDamage());
+				weao->setHealthAttackCost(weao->getHealthAttackCost() - crystal->getSacHealth());
+				weao->setActionAttackCost(weao->getActionAttackCost() - crystal->getSacAction());
+				weao->setMindAttackCost(weao->getMindAttackCost() - crystal->getSacMind());
+				weao->setWoundsRatio(weao->getWoundsRatio() - crystal->getWoundChance());
+				weao->setForceCost(weao->getForceCost() - crystal->getForceCost());
 			}
 
 			if (crystal->getColor() != 31) {

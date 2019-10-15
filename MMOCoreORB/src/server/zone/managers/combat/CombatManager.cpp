@@ -846,8 +846,6 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	}
 
 	int jediToughness = defender->getSkillMod("jedi_toughness");
-	jediToughness += defender->getSkillMod("force_manipulation_dark");
-	jediToughness += defender->getSkillMod("force_manipulation_light");
 	if (jediToughness > 80) {
 		jediToughness = 80;
 	}
@@ -938,9 +936,6 @@ float CombatManager::applyDamageModifiers(CreatureObject* attacker, WeaponObject
 		for (int i = 0; i < weaponDamageMods->size(); ++i) {
 			damage += attacker->getSkillMod(weaponDamageMods->get(i));
 		}
-		
-		damage += attacker->getSkillMod("force_manipulation_dark");
-		damage += attacker->getSkillMod("force_manipulation_light");
 
 		if (weapon->getAttackType() == SharedWeaponObjectTemplate::MELEEATTACK)
 			damage += attacker->getSkillMod("private_melee_damage_bonus");

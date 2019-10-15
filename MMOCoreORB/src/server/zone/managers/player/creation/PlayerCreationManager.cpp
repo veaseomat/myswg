@@ -603,6 +603,11 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 	ghost->addChatRoom(chatManager->getAuctionRoom()->getRoomID());
 
 	ManagedReference<SuiMessageBox*> box = new SuiMessageBox(playerCreature, SuiWindowType::NONE);
+	box->setPromptTitle("WELCOME");
+	box->setPromptText("Welcome to mySWG. Please read the welcome/login email to review all of the current changes. Dont forget to migrate your stats!");
+
+	ghost->addSuiBox(box);
+	playerCreature->sendMessage(box->generateMessage());
 
 	return true;
 }

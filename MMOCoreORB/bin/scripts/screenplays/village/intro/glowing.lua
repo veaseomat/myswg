@@ -105,7 +105,7 @@ function Glowing:onPlayerLoggedIn(pPlayer)
 		.."\nfactory times reduced"
 		.."\ncities and building on ANY planet"
 		.."\nreduced maintenance costs"
-		.."\nDWB entry doesnt require boba fett"
+		.."\nBoba fett at dwb entrance"
 		.."\nDWB droids drop SEA"
 		.."\nclothing/armor 10 sockets each"
 		.."\nall wearables can be color changed"

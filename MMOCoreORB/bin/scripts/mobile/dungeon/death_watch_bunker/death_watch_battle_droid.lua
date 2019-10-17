@@ -7,8 +7,8 @@ death_watch_battle_droid = Creature:new {
 	damageMin = 795,
 	damageMax = 1300,
 	baseXp = 12612,
-	baseHAM = 25000,
-	baseHAMmax = 25000,
+	baseHAM = 56000,
+	baseHAMmax = 68000,
 	armor = 2,
 	resists = {75,75,100,60,100,25,40,85,-1},
 	meatType = "",
@@ -24,7 +24,7 @@ death_watch_battle_droid = Creature:new {
 	creatureBitmask = KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
-	scale = 1.4,
+	scale = 1.15,
 
 	templates = {
 		"object/mobile/death_watch_battle_droid.iff",

@@ -2283,7 +2283,7 @@ void PlayerObjectImplementation::doForceRegen() {
 		Reference<ForceMeditateTask*> medTask = creature->getPendingTask("forcemeditate").castTo<ForceMeditateTask*>();
 
 		if (medTask != nullptr)
-			modifier = 10;
+			modifier = 5;
 	}
 
 	uint32 forceTick = tick * modifier;

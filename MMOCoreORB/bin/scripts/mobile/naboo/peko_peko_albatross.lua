@@ -31,10 +31,7 @@ peko_peko_albatross = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "peko_albatross", chance = 8000000},
-				{group = "holocron_dark", chance = 600000},
-				{group = "holocron_light", chance = 600000},
-
+				{group = "peko_albatross", chance = 10000000}
 			},
 			lootChance = 4100000
 		}

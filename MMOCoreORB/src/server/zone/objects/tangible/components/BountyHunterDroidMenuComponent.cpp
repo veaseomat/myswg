@@ -75,7 +75,7 @@ bool BountyHunterDroidMenuComponent::playerCanUseTrack(CreatureObject* player) c
 }
 
 bool BountyHunterDroidMenuComponent::playerCanUseDroids(CreatureObject* player) const {
-	return player->hasSkill("force_title_jedi_rank_03") or player->hasSkill("combat_bountyhunter_investigation_03");
+	return player->hasSkill("force_title_jedi_rank_03") or player->hasSkill("combat_bountyhunter_investigation_01");
 }
 
 bool BountyHunterDroidMenuComponent::isProbeDroid(SceneObject* droidObject) const {

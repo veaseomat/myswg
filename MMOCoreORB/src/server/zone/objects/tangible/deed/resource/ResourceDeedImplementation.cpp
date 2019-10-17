@@ -70,6 +70,12 @@ int ResourceDeedImplementation::useObject(CreatureObject* creature) {
 }
 
 void ResourceDeedImplementation::destroyDeed() {
-return;
+	if (parent.get() != nullptr) {
 
+	}
+
+	if (isPersistent())
+
+
+	generated = true;
 }

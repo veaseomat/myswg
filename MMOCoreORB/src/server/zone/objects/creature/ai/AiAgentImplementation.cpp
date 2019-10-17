@@ -1201,7 +1201,7 @@ void AiAgentImplementation::setDespawnOnNoPlayerInRange(bool val) {
 		}
 
 		if (!despawnEvent->isScheduled())
-			despawnEvent->schedule(15000);
+			despawnEvent->schedule(30000);
 	}
 }
 

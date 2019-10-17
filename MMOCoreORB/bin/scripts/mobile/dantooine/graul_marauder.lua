@@ -1,6 +1,7 @@
 graul_marauder = Creature:new {
 	objectName = "@mob/creature_names:graul_marauder",
 	socialGroup = "graul",
+	pvpFaction = "",
 	faction = "",
 	level = 173,
 	chanceHit = 10.75,
@@ -10,7 +11,7 @@ graul_marauder = Creature:new {
 	baseHAM = 120000,
 	baseHAMmax = 125000,
 	armor = 2,
-	resists = {175,155,190,190,190,155,155,155,-1},
+	resists = {75,55,90,90,90,55,55,55,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 1000,
 	hideType = "hide_leathery",
@@ -22,18 +23,16 @@ graul_marauder = Creature:new {
 	ferocity = 15,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/graul_hue.iff"},
-	hues = { 8, 9, 10, 11, 12, 13, 14, 15 },
-	scale = 1.35,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
 		{"creatureareableeding",""},
-		{"stunattack",""}
+		{"stunattack","stunChance=50"}
 	}
 }
 

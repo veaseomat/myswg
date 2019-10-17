@@ -1,8 +1,7 @@
 dantari_chief = Creature:new {
 	objectName = "@mob/creature_names:dantari_raider_chief",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
 	socialGroup = "dantari_raiders",
+	pvpFaction = "dantari_raiders",
 	faction = "dantari_raiders",
 	level = 42,
 	chanceHit = 0.44,
@@ -24,24 +23,25 @@ dantari_chief = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dantari_male.iff"},
 	lootGroups = {
-		{
+	    {
 			groups = {
 				{group = "junk", chance = 4000000},
 				{group = "loot_kit_parts", chance = 3000000},
 				{group = "armor_attachments", chance = 500000},
 				{group = "clothing_attachments", chance = 500000},
 				{group = "wearables_all", chance = 2000000}
-			}
-		}
+			},
+			lootChance = 3000000
+		}	
 	},
 	weapons = {"primitive_weapons"},
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster,fencermaster,brawlermaster)
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(dantari_chief, "dantari_chief")

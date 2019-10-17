@@ -1,6 +1,7 @@
 graul_mangler = Creature:new {
 	objectName = "@mob/creature_names:graul_mangler",
 	socialGroup = "graul",
+	pvpFaction = "",
 	faction = "",
 	level = 39,
 	chanceHit = 0.43,
@@ -10,7 +11,7 @@ graul_mangler = Creature:new {
 	baseHAM = 8800,
 	baseHAMmax = 10800,
 	armor = 0,
-	resists = {140,115,160,160,160,25,-1,25,-1},
+	resists = {40,15,60,60,60,25,-1,25,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 950,
 	hideType = "hide_leathery",
@@ -22,19 +23,17 @@ graul_mangler = Creature:new {
 	ferocity = 10,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/graul_hue.iff"},
-	hues = { 8, 9, 10, 11, 12, 13, 14, 15 },
 	controlDeviceTemplate = "object/intangible/pet/graul_hue.iff",
-	scale = 1.1,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"posturedownattack",""},
-		{"blindattack",""}
+		{"blindattack","blindChance=50"},
+		{"posturedownattack","postureDownChance=50"}
 	}
 }
 

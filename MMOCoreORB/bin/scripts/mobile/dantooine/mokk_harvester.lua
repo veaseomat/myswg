@@ -1,8 +1,7 @@
 mokk_harvester = Creature:new {
 	objectName = "@mob/creature_names:mokk_harvester",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
 	socialGroup = "mokk_tribe",
+	pvpFaction = "mokk_tribe",
 	faction = "mokk_tribe",
 	level = 32,
 	chanceHit = 0.39,
@@ -22,30 +21,30 @@ mokk_harvester = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
+	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {
 		"object/mobile/dantari_male.iff",
 		"object/mobile/dantari_female.iff"},
 	lootGroups = {
-		{
+	    {
 			groups = {
-				{group = "junk", chance = 3500000},
+				{group = "junk", chance = 4000000},
 				{group = "loot_kit_parts", chance = 3000000},
 				{group = "armor_attachments", chance = 500000},
 				{group = "clothing_attachments", chance = 500000},
 				{group = "wearables_common", chance = 1000000},
-				{group = "wearables_uncommon", chance = 1000000},
-				{group = "color_crystals", chance = 500000}
-			}
-		}
+				{group = "wearables_uncommon", chance = 1000000}
+			},
+			lootChance = 3000000
+		}		
 	},
 	weapons = {"primitive_weapons"},
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster,fencermaster,brawlermaster)
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(mokk_harvester, "mokk_harvester")

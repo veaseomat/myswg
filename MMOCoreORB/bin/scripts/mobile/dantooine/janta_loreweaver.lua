@@ -1,8 +1,7 @@
 janta_loreweaver = Creature:new {
 	objectName = "@mob/creature_names:janta_loreweaver",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
 	socialGroup = "janta_tribe",
+	pvpFaction = "janta_tribe",
 	faction = "janta_tribe",
 	level = 55,
 	chanceHit = 0.6,
@@ -24,24 +23,25 @@ janta_loreweaver = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {
 		"object/mobile/dantari_male.iff",
 		"object/mobile/dantari_female.iff"},
 	lootGroups = {
-		{
+	    {
 			groups = {
 				{group = "junk", chance = 5500000},
 				{group = "janta_common", chance = 1500000},
 				{group = "loot_kit_parts", chance = 3000000}
-			}
-		}
+			},
+			lootChance = 2000000
+		}	
 	},
 	weapons = {"primitive_weapons"},
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster,fencermaster,brawlermaster)
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(janta_loreweaver, "janta_loreweaver")

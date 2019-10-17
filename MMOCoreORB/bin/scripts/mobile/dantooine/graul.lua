@@ -1,6 +1,7 @@
 graul = Creature:new {
 	objectName = "@mob/creature_names:graul",
 	socialGroup = "graul",
+	pvpFaction = "",
 	faction = "",
 	level = 30,
 	chanceHit = 0.39,
@@ -10,7 +11,7 @@ graul = Creature:new {
 	baseHAM = 8400,
 	baseHAMmax = 10200,
 	armor = 0,
-	resists = {150,20,-1,20,20,-1,-1,-1,-1},
+	resists = {50,20,-1,20,20,-1,-1,-1,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 950,
 	hideType = "hide_leathery",
@@ -22,18 +23,17 @@ graul = Creature:new {
 	ferocity = 10,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
-	templates = {"object/mobile/graul_hue.iff"},
-	hues = { 0, 1, 2, 3, 4, 5, 6, 7 },
+	templates = {"object/mobile/graul.iff"},
 	controlDeviceTemplate = "object/intangible/pet/graul_hue.iff",
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"intimidationattack",""},
-		{"stunattack",""}
+		{"intimidationattack","intimidationChance=50"},
+		{"stunattack","stunChance=50"}
 	}
 }
 

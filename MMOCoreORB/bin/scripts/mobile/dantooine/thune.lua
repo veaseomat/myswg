@@ -1,6 +1,7 @@
 thune = Creature:new {
 	objectName = "@mob/creature_names:thune",
 	socialGroup = "thune",
+	pvpFaction = "",
 	faction = "",
 	level = 26,
 	chanceHit = 0.36,
@@ -10,7 +11,7 @@ thune = Creature:new {
 	baseHAM = 7700,
 	baseHAMmax = 10000,
 	armor = 0,
-	resists = {120,15,15,15,15,15,15,-1,-1},
+	resists = {20,15,15,15,15,15,15,-1,-1},
 	meatType = "meat_herbivore",
 	meatAmount = 115,
 	hideType = "hide_wooly",
@@ -22,18 +23,16 @@ thune = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
-	templates = {"object/mobile/thune_hue.iff"},
-	hues = { 24, 25, 26, 27, 28, 29, 30, 31 },
+	templates = {"object/mobile/thune.iff"},
 	controlDeviceTemplate = "object/intangible/pet/thune_hue.iff",
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"",""},
-		{"intimidationattack",""}
+		{"intimidationattack","intimidationChance=50"}
 	}
 }
 

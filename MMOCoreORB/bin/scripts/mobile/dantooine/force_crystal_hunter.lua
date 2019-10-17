@@ -1,8 +1,7 @@
 force_crystal_hunter = Creature:new {
 	objectName = "@mob/creature_names:dark_force_crystal_hunter",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
 	socialGroup = "kun",
+	pvpFaction = "",
 	faction = "",
 	level = 115,
 	chanceHit = 1,
@@ -24,27 +23,29 @@ force_crystal_hunter = Creature:new {
 	ferocity = 0,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_dark_force_crystal_hunter.iff"},
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 3000000},
-				{group = "power_crystals", chance = 800000},
-				{group = "color_crystals", chance = 700000},
+				{group = "junk", chance = 3500000},
+				{group = "crystals_poor", chance = 500000},
+				{group = "color_crystals", chance = 500000},
+				{group = "holocron_dark", chance = 500000},
+				{group = "holocron_light", chance = 500000},
 				{group = "melee_weapons", chance = 1000000},
 				{group = "armor_attachments", chance = 1000000},
 				{group = "clothing_attachments", chance = 1000000},
-				{group = "wearables_all", chance = 1400000},
-				{group = "force_hunter_rare", chance = 100000}
-			}
-		}
+				{group = "wearables_all", chance = 1500000}
+			},
+			lootChance = 4500000
+		}	
 	},
 	weapons = {"mixed_force_weapons"},
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster,brawlermaster,fencermaster,swordsmanmaster,forcewielder)
+	attacks = merge(pikemanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(force_crystal_hunter, "force_crystal_hunter")

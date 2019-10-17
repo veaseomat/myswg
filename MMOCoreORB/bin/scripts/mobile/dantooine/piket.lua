@@ -1,6 +1,7 @@
 piket = Creature:new {
 	objectName = "@mob/creature_names:piket",
-	socialGroup = "piket",
+	socialGroup = "picket",
+	pvpFaction = "",
 	faction = "",
 	level = 30,
 	chanceHit = 0.39,
@@ -10,7 +11,7 @@ piket = Creature:new {
 	baseHAM = 8400,
 	baseHAMmax = 10200,
 	armor = 0,
-	resists = {25,25,25,-1,25,25,-1,-1,-1},
+	resists = {25,25,25,25,25,25,-1,-1,-1},
 	meatType = "meat_herbivore",
 	meatAmount = 450,
 	hideType = "hide_scaley",
@@ -23,18 +24,16 @@ piket = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
-	templates = {"object/mobile/piket_hue.iff"},
-	hues = { 0, 1, 2, 3, 4, 5, 6, 7 },
+	templates = {"object/mobile/piket.iff"},
 	controlDeviceTemplate = "object/intangible/pet/piket_hue.iff",
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"",""},
-		{"stunattack",""}
+		{"stunattack","stunChance=50"}
 	}
 }
 

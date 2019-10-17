@@ -30,10 +30,6 @@ public:
 		return doCombatAction(creature, target);
 	}
 
-	float getCommandDuration(CreatureObject* object, const UnicodeString& arguments) const {
-		return defaultTime * 3.0;
-	}
-
 };
 
 #endif //SABERTHROW2COMMAND_H_

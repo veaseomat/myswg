@@ -1,6 +1,7 @@
 enraged_defender = Creature:new {
 	objectName = "@mob/creature_names:piket_enraged_defender",
 	socialGroup = "piket",
+	pvpFaction = "",
 	faction = "",
 	level = 49,
 	chanceHit = 0.47,
@@ -10,7 +11,7 @@ enraged_defender = Creature:new {
 	baseHAM = 11000,
 	baseHAMmax = 11000,
 	armor = 1,
-	resists = {140,140,120,0,0,0,0,0,-1},
+	resists = {40,40,20,0,0,0,0,0,-1},
 	meatType = "meat_herbivore",
 	meatAmount = 200,
 	hideType = "hide_scaley",
@@ -22,18 +23,17 @@ enraged_defender = Creature:new {
 	ferocity = 9,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/piket_hue.iff"},
 	controlDeviceTemplate = "object/intangible/pet/piket_hue.iff",
-	scale = 1.2,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"posturedownattack",""},
-		{"blindattack",""}
+		{"blindattack","blindChance=50"},
+		{"posturedownattack","postureDownChance=50"}
 	}
 }
 

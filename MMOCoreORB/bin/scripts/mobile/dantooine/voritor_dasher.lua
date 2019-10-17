@@ -1,6 +1,7 @@
 voritor_dasher = Creature:new {
 	objectName = "@mob/creature_names:voritor_dasher",
 	socialGroup = "voritor",
+	pvpFaction = "",
 	faction = "",
 	level = 30,
 	chanceHit = 0.39,
@@ -10,7 +11,7 @@ voritor_dasher = Creature:new {
 	baseHAM = 9300,
 	baseHAMmax = 11300,
 	armor = 0,
-	resists = {20,-1,20,-1,-1,-1,-1,20,-1},
+	resists = {0,0,0,0,0,0,0,0,0},
 	meatType = "meat_carnivore",
 	meatAmount = 40,
 	hideType = "hide_leathery",
@@ -20,27 +21,18 @@ voritor_dasher = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
+	pvpBitmask = AGGRESSIVE + ATTACKABLE,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
-	diet = CARNIVORE,
+	optionsBitmask = 0,
+	diet = NONE,
 
 	templates = {"object/mobile/voritor_dasher.iff"},
-	hues = { 24, 25, 26, 27, 28, 29, 30, 31 },
-	scale = 1.05,
-	lootGroups = {
-		{
-			groups = {
-				{group = "voritor_lizard_common", chance = 10000000}
-			},
-			lootChance = 1600000
-		}
-	},
-	weapons = {"creature_spit_small_yellow"},
+	lootGroups = {},
+	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"dizzyattack",""},
-		{"creatureareapoison",""}
+		{"creatureareapoison",""},
+		{"dizzyattack","dizzyChance=50"}
 	}
 }
 

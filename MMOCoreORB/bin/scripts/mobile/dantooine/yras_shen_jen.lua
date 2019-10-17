@@ -1,6 +1,7 @@
 yras_shen_jen = Creature:new {
 	objectName = "@npc_spawner_n:yras_shen_jen",
 	socialGroup = "townsperson",
+	pvpFaction = "townsperson",
 	faction = "townsperson",
 	level = 100,
 	chanceHit = 1,
@@ -22,7 +23,7 @@ yras_shen_jen = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/space_greeter_dantooine_old_pilot.iff"},

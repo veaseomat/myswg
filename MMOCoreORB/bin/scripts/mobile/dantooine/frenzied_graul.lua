@@ -1,6 +1,7 @@
 frenzied_graul = Creature:new {
 	objectName = "@mob/creature_names:frenzied_graul",
 	socialGroup = "graul",
+	pvpFaction = "",
 	faction = "",
 	level = 56,
 	chanceHit = 0.5,
@@ -10,7 +11,7 @@ frenzied_graul = Creature:new {
 	baseHAM = 9500,
 	baseHAMmax = 11700,
 	armor = 1,
-	resists = {165,135,190,190,190,-1,5,5,-1},
+	resists = {65,35,90,90,90,-1,5,5,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 1000,
 	hideType = "hide_leathery",
@@ -22,19 +23,17 @@ frenzied_graul = Creature:new {
 	ferocity = 15,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/frenzied_graul.iff"},
-	hues = { 24, 25, 26, 27, 28, 29, 30, 31 },
 	controlDeviceTemplate = "object/intangible/pet/graul_hue.iff",
-	scale = 1.2,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
 		{"creatureareableeding",""},
-		{"stunattack",""}
+		{"stunattack","stunChance=50"}
 	}
 }
 

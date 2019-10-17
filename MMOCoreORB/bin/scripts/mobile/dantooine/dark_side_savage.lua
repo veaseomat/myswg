@@ -1,6 +1,7 @@
 dark_side_savage = Creature:new {
 	objectName = "@mob/creature_names:dark_side_savage",
 	socialGroup = "kun",
+	pvpFaction = "",
 	faction = "",
 	level = 75,
 	chanceHit = 0.7,
@@ -20,9 +21,9 @@ dark_side_savage = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = ATTACKABLE,
+	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_dark_side_savage.iff"},
@@ -30,19 +31,23 @@ dark_side_savage = Creature:new {
 		{
 			groups = {
 				{group = "junk", chance = 4000000},
-				{group = "power_crystals", chance = 500000},
+				{group = "crystals_poor", chance = 500000},
 				{group = "color_crystals", chance = 500000},
+				{group = "holocron_dark", chance = 500000},
+				{group = "holocron_light", chance = 500000},
 				{group = "melee_weapons", chance = 1000000},
 				{group = "armor_attachments", chance = 1000000},
 				{group = "clothing_attachments", chance = 1000000},
 				{group = "wearables_common", chance = 500000},
 				{group = "wearables_uncommon", chance = 500000}
-			}
-		}
+			},
+			lootChance = 3000000
+		}	
 	},
 	weapons = {},
 	conversationTemplate = "",
-	attacks = merge(tkamaster,brawlermaster)
+	attacks = {
+	}
 }
 
 CreatureTemplates:addCreatureTemplate(dark_side_savage, "dark_side_savage")

@@ -1,6 +1,7 @@
 bol = Creature:new {
 	objectName = "@mob/creature_names:bol",
 	socialGroup = "bol",
+	pvpFaction = "",
 	faction = "",
 	level = 29,
 	chanceHit = 0.39,
@@ -10,7 +11,7 @@ bol = Creature:new {
 	baseHAM = 8400,
 	baseHAMmax = 10200,
 	armor = 0,
-	resists = {135,20,-1,20,20,-1,20,-1,-1},
+	resists = {35,20,0,20,20,0,20,0,-1},
 	meatType = "meat_herbivore",
 	meatAmount = 180,
 	hideType = "hide_leathery",
@@ -22,17 +23,16 @@ bol = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/bol_hue.iff"},
-	hues = { 8, 9, 10, 11, 12, 13, 14, 15 },
+	templates = {"object/mobile/bol.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"knockdownattack",""},
-		{"intimidationattack",""}
+		{"intimidationattack","intimidationChance=50"},
+		{"knockdownattack","knockdownChance=50"}
 	}
 }
 

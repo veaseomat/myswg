@@ -1,6 +1,7 @@
 huurton_huntress = Creature:new {
 	objectName = "@mob/creature_names:huurton_huntress",
 	socialGroup = "huurton",
+	pvpFaction = "",
 	faction = "",
 	level = 28,
 	chanceHit = 0.37,
@@ -10,7 +11,7 @@ huurton_huntress = Creature:new {
 	baseHAM = 8200,
 	baseHAMmax = 10000,
 	armor = 0,
-	resists = {15,15,15,140,200,-1,-1,-1,-1},
+	resists = {15,15,15,40,100,-1,-1,-1,-1},
 	meatType = "meat_wild",
 	meatAmount = 15,
 	hideType = "hide_wooly",
@@ -22,19 +23,17 @@ huurton_huntress = Creature:new {
 	ferocity = 0,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER + STALKER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/huurton_hue.iff"},
-	hues = { 24, 25, 26, 27, 28, 29, 30, 31 },
 	controlDeviceTemplate = "object/intangible/pet/huurton_hue.iff",
-	scale = 1.15,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"knockdownattack",""},
-		{"stunattack",""}
+		{"knockdownattack","knockdownChance=50"},
+		{"stunattack","stunChance=50"}
 	}
 }
 

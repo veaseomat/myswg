@@ -2,6 +2,7 @@ ussox = Creature:new {
 	objectName = "@npc_name:trandoshan_base_male",
 	customName = "Ussox",
 	socialGroup = "townsperson",
+	pvpFaction = "townsperson",
 	faction = "townsperson",
 	level = 100,
 	chanceHit = 1,
@@ -23,7 +24,7 @@ ussox = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_villain_trandoshan_male_01.iff"},

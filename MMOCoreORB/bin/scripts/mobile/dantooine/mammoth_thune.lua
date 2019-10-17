@@ -1,16 +1,17 @@
 mammoth_thune = Creature:new {
 	objectName = "@mob/creature_names:mammoth_thune",
 	socialGroup = "thune",
+	pvpFaction = "",
 	faction = "",
 	level = 129,
-	chanceHit = 4.75,
+	chanceHit = 47.5,
 	damageMin = 720,
 	damageMax = 1150,
 	baseXp = 12235,
 	baseHAM = 81000,
 	baseHAMmax = 99000,
-	armor = 2,
-	resists = {35,35,25,25,25,25,25,25,-1},
+	armor = 0,
+	resists = {55,55,45,45,45,45,45,45,-1},
 	meatType = "meat_herbivore",
 	meatAmount = 225,
 	hideType = "hide_wooly",
@@ -22,18 +23,16 @@ mammoth_thune = Creature:new {
 	ferocity = 0,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + HERD + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/thune_hue.iff"},
-	hues = { 24, 25, 26, 27, 28, 29, 30, 31 },
-	scale = 1.4,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"dizzyattack",""},
-		{"posturedownattack",""}
+		{"dizzyattack","dizzyChance=50"},
+		{"posturedownattack","postureDownChance=50"}
 	}
 }
 

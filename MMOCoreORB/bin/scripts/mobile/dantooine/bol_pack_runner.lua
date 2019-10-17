@@ -1,6 +1,7 @@
 bol_pack_runner = Creature:new {
 	objectName = "@mob/creature_names:bol_pack_runner",
 	socialGroup = "bol",
+	pvpFaction = "",
 	faction = "",
 	level = 26,
 	chanceHit = 0.36,
@@ -10,7 +11,7 @@ bol_pack_runner = Creature:new {
 	baseHAM = 8200,
 	baseHAMmax = 10000,
 	armor = 0,
-	resists = {125,125,15,15,-1,-1,15,-1,-1},
+	resists = {25,25,15,15,-1,-1,15,-1,-1},
 	meatType = "meat_herbivore",
 	meatAmount = 180,
 	hideType = "hide_leathery",
@@ -22,18 +23,16 @@ bol_pack_runner = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/bol_pack_runner.iff"},
-	hues = { 8, 9, 10, 11, 12, 13, 14, 15 },
-	scale = 0.95,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"stunattack",""},
-		{"dizzyattack",""}
+		{"dizzyattack","dizzyChance=50"},
+		{"stunattack","stunChance=50"}
 	}
 }
 

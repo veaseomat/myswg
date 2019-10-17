@@ -1,8 +1,7 @@
 dantari_strategist = Creature:new {
 	objectName = "@mob/creature_names:dantari_raider_strategist",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
 	socialGroup = "dantari_raiders",
+	pvpFaction = "dantari_raiders",
 	faction = "dantari_raiders",
 	level = 29,
 	chanceHit = 0.39,
@@ -24,26 +23,27 @@ dantari_strategist = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {
 		"object/mobile/dantari_male.iff",
 		"object/mobile/dantari_female.iff"},
 	lootGroups = {
-		{
+	    {
 			groups = {
 				{group = "junk", chance = 4000000},
 				{group = "loot_kit_parts", chance = 3000000},
 				{group = "armor_attachments", chance = 500000},
 				{group = "clothing_attachments", chance = 500000},
 				{group = "wearables_common", chance = 2000000}
-			}
-		}
+			},
+			lootChance = 3000000
+		}	
 	},
 	weapons = {"primitive_weapons"},
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster,fencermaster,brawlermaster)
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(dantari_strategist, "dantari_strategist")

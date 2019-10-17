@@ -1,6 +1,7 @@
 spiked_slasher = Creature:new {
 	objectName = "@mob/creature_names:voritor_spiked_slasher",
 	socialGroup = "voritor",
+	pvpFaction = "",
 	faction = "",
 	level = 58,
 	chanceHit = 0.53,
@@ -10,7 +11,7 @@ spiked_slasher = Creature:new {
 	baseHAM = 10000,
 	baseHAMmax = 13000,
 	armor = 0,
-	resists = {165,140,0,0,150,-1,120,0,-1},
+	resists = {65,40,0,0,50,-1,20,0,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 65,
 	hideType = "hide_leathery",
@@ -22,25 +23,24 @@ spiked_slasher = Creature:new {
 	ferocity = 0,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/voritor_lizard_hue.iff"},
 	controlDeviceTemplate = "object/intangible/pet/voritor_lizard_hue.iff",
-	scale = 1.3,
 	lootGroups = {
-		{
-			groups = {
+	 {
+	        groups = {
 				{group = "voritor_lizard_common", chance = 10000000}
 			},
-			lootChance = 2160000
+			lootChance = 2300000
 		}
 	},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"strongpoison",""},
-		{"creatureareapoison",""}
+		{"creatureareapoison",""},
+		{"strongpoison",""}
 	}
 }
 

@@ -1,6 +1,7 @@
 kess_yarrow = Creature:new {
 	objectName = "@npc_spawner_n:kess_yarrow",
 	socialGroup = "rebel",
+	pvpFaction = "rebel",
 	faction = "rebel",
 	level = 100,
 	chanceHit = 1,
@@ -22,7 +23,7 @@ kess_yarrow = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = NONE,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/space_greeter_dantooine_brother_rebel.iff"},

@@ -1,6 +1,7 @@
 bek_rabor = Creature:new {
 	objectName = "@npc_spawner_n:bek_rabor",
-	socialGroup = "townsperson",
+	socialGroup = "Townsperson",
+	pvpFaction = "imperial",
 	faction = "imperial",
 	level = 100,
 	chanceHit = 1,
@@ -22,7 +23,7 @@ bek_rabor = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/space_greeter_dantooine_imperial_officer.iff"},

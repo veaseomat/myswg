@@ -4,14 +4,11 @@ jedi_holocron_dark = {
 	minimumLevel = 0,
 	maximumLevel = -1,
 	customObjectName = "",
-	directObjectTemplate = "object/tangible/loot/misc/holocron_splinters_sith_s01.iff",
+	directObjectTemplate = "object/tangible/jedi/jedi_holocron_dark.iff",
 	craftingValues = {
 	},
 	customizationStringNames = {},
-	customizationValues = {},
-	junkDealerTypeNeeded = JUNKJEDI,
-	junkMinValue = 30,
-	junkMaxValue = 70
+	customizationValues = {}
 }
 
 addLootItemTemplate("jedi_holocron_dark", jedi_holocron_dark)

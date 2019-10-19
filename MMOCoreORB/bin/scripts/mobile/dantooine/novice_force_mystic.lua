@@ -1,7 +1,6 @@
 novice_force_mystic = Creature:new {
 	objectName = "@mob/creature_names:novice_force_mystic",
 	socialGroup = "force",
-	pvpFaction = "",
 	faction = "",
 	level = 60,
 	chanceHit = 0.6,
@@ -22,29 +21,28 @@ novice_force_mystic = Creature:new {
 	tamingChance = 0,
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK + KILLER,
-	optionsBitmask = 128,
+	creatureBitmask = PACK + KILLER + HEALER,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {},
+	templates = {"object/mobile/dressed_novice_force_mystic.iff"},
 	lootGroups = {
 		{
 			groups = {
 				{group = "junk", chance = 5000000},
-				{group = "crystals_poor", chance = 500000},
+				{group = "power_crystals", chance = 500000},
 				{group = "color_crystals", chance = 500000},
 				{group = "melee_weapons", chance = 1000000},
 				{group = "armor_attachments", chance = 500000},
 				{group = "clothing_attachments", chance = 500000},
 				{group = "wearables_common", chance = 1000000},
 				{group = "wearables_uncommon", chance = 1000000}
-			},
-			lootChance = 3000000
-		}	
+			}
+		}
 	},
 	weapons = {"mixed_force_weapons"},
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster)
+	attacks = merge(pikemanmaster,brawlermaster,fencermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(novice_force_mystic, "novice_force_mystic")

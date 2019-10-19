@@ -2008,8 +2008,6 @@ void PlayerObjectImplementation::activateForcePowerRegen() {
 	float regen = (float)creature->getSkillMod("jedi_force_power_regen");
 
 	regen += 10;
-	regen += creature->getSkillMod("force_manipulation_dark");
-	regen += creature->getSkillMod("force_manipulation_light");
 
 	if(regen == 0.0f)
 		return;

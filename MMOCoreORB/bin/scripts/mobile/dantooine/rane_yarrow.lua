@@ -1,7 +1,6 @@
 rane_yarrow = Creature:new {
 	objectName = "@npc_spawner_n:rane_yarrow",
 	socialGroup = "townsperson",
-	pvpFaction = "townsperson",
 	faction = "townsperson",
 	level = 100,
 	chanceHit = 1,
@@ -23,7 +22,7 @@ rane_yarrow = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = NONE,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/space_greeter_dantooine_brother_neutral.iff"},

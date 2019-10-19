@@ -1,7 +1,6 @@
 adwan_turoldine = Creature:new {
 	objectName = "@npc_spawner_n:adwan_turoldine",
 	socialGroup = "townsperson",
-	pvpFaction = "townsperson",
 	faction = "townsperson",
 	level = 100,
 	chanceHit = 1,
@@ -23,7 +22,7 @@ adwan_turoldine = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/space_privateer_tier4_corellia_adwan.iff"},

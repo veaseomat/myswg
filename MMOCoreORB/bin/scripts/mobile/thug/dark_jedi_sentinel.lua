@@ -4,13 +4,13 @@ dark_jedi_sentinel = Creature:new {
 	randomNameTag = true,
 	socialGroup = "self",
 	faction = "",
-	level = 1,
-	chanceHit = 30,
-	damageMin = 2645,
-	damageMax = 5000,
-	baseXp = 45,
-	baseHAM = 1106000,
-	baseHAMmax = 1352000,
+	level = 291,
+	chanceHit = 27.25,
+	damageMin = 1800,
+	damageMax = 3310,
+	baseXp = 27849,
+	baseHAM = 321000,
+	baseHAMmax = 392000,
 	armor = 3,
 	resists = {95,95,95,95,95,95,95,95,-1},
 	meatType = "",
@@ -29,13 +29,14 @@ dark_jedi_sentinel = Creature:new {
 
 	templates = { "dark_jedi" },
 	lootGroups = {
-				{group = "holocron_dark", chance = 600000},
-				{group = "holocron_light", chance = 600000},
-				{group = "power_crystals", chance = 600000},
-				{group = "color_crystals", chance = 600000},
-				{group = "melee_saber", chance = 600000},
+		{
+			groups = {
+				{group = "melee_saber", chance = 10000000},
+			},
+						lootChance = 10000000
+		},
 	},
-	weapons = {"dark_jedi_weapons_gen4"},
+	weapons = {"dark_jedi_weapons_gen2"},
 	conversationTemplate = "",
 	attacks = merge(lightsabermaster,forcepowermaster)
 }

@@ -1,7 +1,6 @@
 infant_graul = Creature:new {
 	objectName = "@mob/creature_names:infant_graul",
 	socialGroup = "graul",
-	pvpFaction = "",
 	faction = "",
 	level = 27,
 	chanceHit = 0.36,
@@ -11,7 +10,7 @@ infant_graul = Creature:new {
 	baseHAM = 7200,
 	baseHAMmax = 8800,
 	armor = 0,
-	resists = {35,0,45,45,45,-1,-1,-1,-1},
+	resists = {135,0,145,145,145,-1,-1,-1,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 700,
 	hideType = "hide_leathery",
@@ -21,18 +20,20 @@ infant_graul = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = AGGRESSIVE + ATTACKABLE,
+	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/infant_graul.iff"},
+	hues = { 16, 17, 18, 19, 20, 21, 22, 23 },
+	scale = 0.75,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"dizzyattack","dizzyChance=50"},
-		{"stunattack","stunChance=50"}
+		{"dizzyattack",""},
+		{"stunattack",""}
 	}
 }
 

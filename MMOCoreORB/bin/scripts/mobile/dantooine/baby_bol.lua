@@ -1,7 +1,6 @@
 baby_bol = Creature:new {
 	objectName = "@mob/creature_names:baby_bol",
 	socialGroup = "bol",
-	pvpFaction = "",
 	faction = "",
 	level = 10,
 	chanceHit = 0.28,
@@ -24,10 +23,12 @@ baby_bol = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = HERD,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/baby_bol.iff"},
+	hues = { 0, 1, 2, 3, 4, 5, 6, 7 },
+	scale = 0.7,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",

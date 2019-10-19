@@ -139,18 +139,6 @@ String CraftingManagerImplementation::generateSerial() {
 
 	ss << "(";
 
-	for (int i = 0; i < 8; ++i) {
-
-		a = (System::random(34));
-		if (a < 9) {
-			a = a + 48;
-		} else {
-			a -= 9;
-			a = a + 97;
-		}
-		ss << a;
-	}
-
 	ss << ")";
 
 

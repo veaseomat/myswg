@@ -1,7 +1,6 @@
 grassland_voritor_tracker = Creature:new {
 	objectName = "@mob/creature_names:grassland_voritor_tracker",
 	socialGroup = "voritor",
-	pvpFaction = "",
 	faction = "",
 	level = 45,
 	chanceHit = 0.44,
@@ -11,7 +10,7 @@ grassland_voritor_tracker = Creature:new {
 	baseHAM = 8700,
 	baseHAMmax = 10700,
 	armor = 0,
-	resists = {65,65,30,30,30,30,-1,30,-1},
+	resists = {165,165,30,30,30,30,-1,30,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 45,
 	hideType = "hide_leathery",
@@ -23,23 +22,25 @@ grassland_voritor_tracker = Creature:new {
 	ferocity = 0,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + STALKER,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/grassland_voritor_tracker.iff"},
+	hues = { 16, 17, 18, 19, 20, 21, 22, 23 },
+	scale = 1.1,
 	lootGroups = {
-		 {
-	        groups = {
+		{
+			groups = {
 				{group = "voritor_lizard_common", chance = 10000000}
 			},
-			lootChance = 2300000
+			lootChance = 1900000
 		}
 	},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"knockdownattack","knockdownChance=50"},
-		{"posturedownattack","postureDownChance=50"}
+		{"knockdownattack",""},
+		{"posturedownattack",""}
 	}
 }
 

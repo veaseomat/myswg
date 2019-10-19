@@ -1,7 +1,6 @@
 slinking_voritor_hunter = Creature:new {
 	objectName = "@mob/creature_names:slinking_voritor_hunter",
 	socialGroup = "voritor",
-	pvpFaction = "",
 	faction = "",
 	level = 57,
 	chanceHit = 0.55,
@@ -10,8 +9,8 @@ slinking_voritor_hunter = Creature:new {
 	baseXp = 5555,
 	baseHAM = 11000,
 	baseHAMmax = 13000,
-	armor = 0,
-	resists = {45,45,10,10,10,-1,10,10,-1},
+	armor = 1,
+	resists = {145,145,10,10,10,-1,10,10,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 90,
 	hideType = "hide_leathery",
@@ -23,23 +22,25 @@ slinking_voritor_hunter = Creature:new {
 	ferocity = 0,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER + STALKER,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/slinking_voritor_hunter.iff"},
+	hues = { 0, 1, 2, 3, 4, 5, 6, 7 },
+	scale = 1.25,
 	lootGroups = {
-	 {
-	        groups = {
+		{
+			groups = {
 				{group = "voritor_lizard_common", chance = 10000000}
 			},
-			lootChance = 2300000
+			lootChance = 2140000
 		}
 	},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"dizzyattack","dizzyChance=50"},
-		{"posturedownattack","postureDownChance=50"}
+		{"posturedownattack",""},
+		{"dizzyattack",""}
 	}
 }
 

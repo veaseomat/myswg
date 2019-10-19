@@ -1,7 +1,6 @@
 huurton_bloodhunter = Creature:new {
 	objectName = "@mob/creature_names:huurton_bloodhunter",
 	socialGroup = "huurton",
-	pvpFaction = "",
 	faction = "",
 	level = 28,
 	chanceHit = 0.37,
@@ -11,7 +10,7 @@ huurton_bloodhunter = Creature:new {
 	baseHAM = 9000,
 	baseHAMmax = 9000,
 	armor = 0,
-	resists = {15,15,15,25,15,15,15,-1,-1},
+	resists = {115,115,15,125,115,15,15,-1,-1},
 	meatType = "meat_wild",
 	meatAmount = 15,
 	hideType = "hide_wooly",
@@ -23,16 +22,19 @@ huurton_bloodhunter = Creature:new {
 	ferocity = 9,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + HERD + KILLER,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/huurton_hue.iff"},
+	hues = { 0, 1, 2, 3, 4, 5, 6, 7 },
 	controlDeviceTemplate = "object/intangible/pet/huurton_hue.iff",
+	scale = 1.2,
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"stunattack","stunChance=50"}
+		{"stunattack",""},
+		{"posturedownattack",""}
 	}
 }
 

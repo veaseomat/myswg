@@ -165,13 +165,6 @@ void MissionManagerImplementation::handleMissionListRequest(MissionTerminal* mis
 		return;
 	}
 
-	if (missionTerminal->isBountyTerminal()) {
-		if (!player->hasSkill("combat_bountyhunter_novice") or !player->hasSkill("force_title_jedi_rank_03")) {
-			player->sendSystemMessage("@mission/mission_generic:not_bounty_hunter_terminal");
-			return;
-		}
-	}
-
 	ManagedReference<CityRegion*> terminalCity = missionTerminal->getCityRegion().get();
 
 	if (terminalCity != nullptr) {
@@ -948,23 +941,21 @@ void MissionManagerImplementation::randomizeGenericSurveyMission(CreatureObject*
 }
 
 void MissionManagerImplementation::randomizeGenericBountyMission(CreatureObject* player, MissionObject* mission, const uint32 faction, Vector<ManagedReference<PlayerBounty*>>* potentialTargets) {
-	if (!player->hasSkill("combat_bountyhunter_novice") or !player->hasSkill("force_title_jedi_rank_03")) {
-		player->sendSystemMessage("@mission/mission_generic:not_bounty_hunter_terminal");
-		return;
-	}
-
 	Zone* playerZone = player->getZone();
 
 	if (playerZone == nullptr) {
 		return;
 	}
 
-	int level = 1;
+	int level = 3;
 	int randomTexts = 25;
-	if (player->hasSkill("combat_bountyhunter_investigation_03") || player->hasSkill("force_title_jedi_rank_03")) {
+	if (player->hasSkill("combat_bountyhunter_investigation_03")) {
+		level = 3;
+	}
+	if (player->hasSkill("force_title_jedi_rank_03")) {
 		level = 3;
 	} else if (player->hasSkill("combat_bountyhunter_investigation_01")) {
-		level = 2;
+		level = 3;
 		randomTexts = 50;
 	}
 

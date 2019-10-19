@@ -1,7 +1,8 @@
 janta_warrior = Creature:new {
 	objectName = "@mob/creature_names:janta_warrior",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
 	socialGroup = "janta_tribe",
-	pvpFaction = "janta_tribe",
 	faction = "janta_tribe",
 	level = 70,
 	chanceHit = 0.7,
@@ -23,25 +24,24 @@ janta_warrior = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {
 		"object/mobile/dantari_male.iff",
 		"object/mobile/dantari_female.iff"},
 	lootGroups = {
-	    {
+		{
 			groups = {
 				{group = "junk", chance = 5500000},
 				{group = "janta_common", chance = 1500000},
 				{group = "loot_kit_parts", chance = 3000000}
-			},
-			lootChance = 2000000
-		}	
+			}
+		}
 	},
 	weapons = {"primitive_weapons"},
 	conversationTemplate = "",
-	attacks = merge(brawlermaster,marksmanmaster)
+	attacks = merge(pikemanmaster,fencermaster,brawlermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(janta_warrior, "janta_warrior")

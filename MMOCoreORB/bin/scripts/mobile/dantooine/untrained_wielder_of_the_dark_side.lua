@@ -1,7 +1,8 @@
 untrained_wielder_of_the_dark_side = Creature:new {
 	objectName = "@mob/creature_names:untrained_wielder_of_the_dark_side",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
 	socialGroup = "kun",
-	pvpFaction = "",
 	faction = "",
 	level = 65,
 	chanceHit = 0.6,
@@ -11,7 +12,7 @@ untrained_wielder_of_the_dark_side = Creature:new {
 	baseHAM = 11000,
 	baseHAMmax = 14000,
 	armor = 1,
-	resists = {30,30,15,15,15,15,15,15,-1},
+	resists = {130,130,15,15,15,15,15,15,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -23,7 +24,7 @@ untrained_wielder_of_the_dark_side = Creature:new {
 	ferocity = 0,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_untrained_wielder_of_the_darkside.iff"},
@@ -31,7 +32,7 @@ untrained_wielder_of_the_dark_side = Creature:new {
 		{
 			groups = {
 				{group = "junk", chance = 3500000},
-				{group = "crystals_poor", chance = 500000},
+				{group = "power_crystals", chance = 500000},
 				{group = "color_crystals", chance = 500000},
 				{group = "holocron_dark", chance = 500000},
 				{group = "holocron_light", chance = 500000},
@@ -40,13 +41,12 @@ untrained_wielder_of_the_dark_side = Creature:new {
 				{group = "clothing_attachments", chance = 1000000},
 				{group = "wearables_uncommon", chance = 750000},
 				{group = "wearables_common", chance = 750000}
-			},
-			lootChance = 3000000
-		}			
+			}
+		}
 	},
 	weapons = {"mixed_force_weapons"},
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster)
+	attacks = merge(pikemanmaster,brawlermaster,fencermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(untrained_wielder_of_the_dark_side, "untrained_wielder_of_the_dark_side")

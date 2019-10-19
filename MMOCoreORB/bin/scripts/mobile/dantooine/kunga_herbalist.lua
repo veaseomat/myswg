@@ -1,7 +1,8 @@
 kunga_herbalist = Creature:new {
 	objectName = "@mob/creature_names:kunga_herbalist",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
 	socialGroup = "kunga_tribe",
-	pvpFaction = "kunga_tribe",
 	faction = "kunga_tribe",
 	level = 16,
 	chanceHit = 0.31,
@@ -23,28 +24,28 @@ kunga_herbalist = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD,
-	optionsBitmask = 128,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {
 		"object/mobile/dantari_male.iff",
 		"object/mobile/dantari_female.iff"},
 	lootGroups = {
-	    {
+		{
 			groups = {
-				{group = "junk", chance = 4000000},
+				{group = "junk", chance = 3500000},
 				{group = "loot_kit_parts", chance = 3000000},
 				{group = "armor_attachments", chance = 500000},
 				{group = "clothing_attachments", chance = 500000},
 				{group = "wearables_common", chance = 1000000},
-				{group = "wearables_uncommon", chance = 1000000}
-			},
-			lootChance = 3000000
-		}	
+				{group = "wearables_uncommon", chance = 1000000},
+				{group = "power_crystals", chance = 500000}
+			}
+		}
 	},
 	weapons = {"primitive_weapons"},
 	conversationTemplate = "",
-	attacks = merge(brawlermaster,marksmanmaster)
+	attacks = brawlermaster
 }
 
 CreatureTemplates:addCreatureTemplate(kunga_herbalist, "kunga_herbalist")

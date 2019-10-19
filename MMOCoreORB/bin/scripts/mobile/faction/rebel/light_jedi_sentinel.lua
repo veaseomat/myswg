@@ -41,6 +41,12 @@ light_jedi_sentinel = Creature:new {
 			},
 						lootChance = 10000000
 		},
+		{
+			groups = {
+				{group = "jrobe", chance = 10000000},
+			},
+						lootChance = 10000000
+		},
 	},
 	weapons = {"dark_jedi_weapons_gen2"},
 	conversationTemplate = "",

@@ -90,7 +90,7 @@ function Glowing:onPlayerLoggedIn(pPlayer)
 		.."\n-Unlock jedi by visiting 3 jedi POI then type /checkforce (ben kenobis home on tatooine, jedi temple on dantooine, exar kun temple on yavin4)."
 		.."\n-Use the /findmytrainer to locate your jedi skill trainer."
 		.."\n\nTHE KNIGHTLY KNEWS:"
-		.."\n-Jedi Sentinels at the enclaves drop perfect stat 4th gen lightsabers (they are the same strength as Dark Jedi Masters)."
+		.."\n-Jedi Sentinels at the Enclaves drop perfect stat 4th gen lightsabers and all FRS robes(they are the same difficulty as Dark Jedi Masters)."
 		.."\n\nTHE CHANGES:"
 		.."\n5char, 2char online per account, multi accounts will get you banned"
 		.."\ninfinite skill points, jedi cant learn non jedi skills"

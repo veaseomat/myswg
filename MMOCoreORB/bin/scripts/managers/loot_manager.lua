@@ -145,14 +145,12 @@ lootableArmorAttachmentStatMods = {
 }
 
 lootableClothingAttachmentStatMods = {
-	"jedi_saber_assembly",
-	"jedi_saber_experimentation",
+	"jedi_force_power_regen",
+	"lightsaber_toughness",
+	"jedi_toughness",
 	"twohandlightsaber_accuracy",
-	"twohandlightsaber_speed",
 	"polearmlightsaber_accuracy",
-	"polearmlightsaber_speed",
 	"onehandlightsaber_accuracy",
-	"onehandlightsaber_speed",
 	"dna_harvesting",
 	"bio_engineer_assembly",
 	"bio_engineer_experimentation",
@@ -386,14 +384,12 @@ lootableArmorStatMods = {
 }
 
 lootableClothingStatMods = {
-	"jedi_saber_assembly",
-	"jedi_saber_experimentation",
+	"jedi_force_power_regen",
+	"lightsaber_toughness",
+	"jedi_toughness",
 	"twohandlightsaber_accuracy",
-	"twohandlightsaber_speed",
 	"polearmlightsaber_accuracy",
-	"polearmlightsaber_speed",
 	"onehandlightsaber_accuracy",
-	"onehandlightsaber_speed",
 	"dna_harvesting",
 	"bio_engineer_assembly",
 	"bio_engineer_experimentation",

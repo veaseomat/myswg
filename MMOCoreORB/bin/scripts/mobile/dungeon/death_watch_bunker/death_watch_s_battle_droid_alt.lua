@@ -7,8 +7,8 @@ death_watch_s_battle_droid_alt = Creature:new {
 	damageMin = 1200,
 	damageMax = 2100,
 	baseXp = 19000,
-	baseHAM = 230000,
-	baseHAMmax = 230000,
+	baseHAM = 50000,
+	baseHAMmax = 50000,
 	armor = 2,
 	resists = {85,95,100,60,100,25,40,85,-1},
 	meatType = "",
@@ -36,7 +36,14 @@ death_watch_s_battle_droid_alt = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000}
 			},
-			lootChance = 5000000
+			lootChance = 10000000
+		},
+		{
+			groups = {
+				{group = "armor_attachments", chance = 5000000},
+				{group = "clothing_attachments", chance = 5000000}
+			},
+			lootChance = 10000000
 		}
 	},
 	conversationTemplate = "",
